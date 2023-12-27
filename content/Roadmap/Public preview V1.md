@@ -1,0 +1,7 @@
+- [ ] Optional blockly
+- [ ] Finished compiler
+- [ ] Finished Visual Script
+- [ ] Finished bot sharing/editing COOPERATION
+- [ ] Bot Hosting
+- [ ] Paid access to private plugins/profiles/bots
+- [ ] Finished Docs

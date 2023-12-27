@@ -1,0 +1,2 @@
+- [ ] Integrate AI
+- [ ] Be on NTTS

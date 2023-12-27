@@ -1,0 +1,18 @@
+- [ ] User
+   - [ ] [[User auth]]
+   - [ ] [[User Profiles]]
+   - [ ] [[User Search]]
+   - [ ] [[Delete account]]
+   - [ ] usless and usefull stats
+- [ ] Admin
+   - [ ] changelog
+   - [ ] [[toasts]]
+- [ ] Settings
+- [ ] Dashboard
+- [ ] Marketplace V1
+- [ ] Blockly V1 (send message event)
+- [ ] Documentation V1
+- [ ] Starting tutorials
+- [ ] Social media influence
+- non important
+  - [ ] Badges

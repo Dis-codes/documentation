@@ -1,0 +1,11 @@
+- [ ]  Better ads for app
+- [ ] Marketplace V2
+- [ ] More blocks
+- [ ] Compiler V1
+- [ ] Visual Script V1
+- [ ] Alpha bot sharing/editing COOPERATION
+- [ ] Finished UI
+- [ ] Support
+- [ ] Notifications
+- [ ] Admin pannel finished
+- [ ] Docs V2

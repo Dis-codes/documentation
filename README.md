@@ -1,20 +1,27 @@
-# Quartz v4
+# Developer documentation
+Using [Obsidian](https://obsidian.md/) to write docs, using [Quartz](https://quartz.jzhao.xyz/) to transfer it to a website
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+## View locally
+```bash
+npm i
+quartz build --serve
+```
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
-Quartz v4 features a from-the-ground rewrite focusing on end-user extensibility and ease-of-use.
+## synchronize
+```bash
+npx quartz sync
+```
 
-**If you are looking for Quartz v3, you can find it on the [`hugo` branch](https://github.com/jackyzha0/quartz/tree/hugo).**
-
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
-
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
-
-## Sponsors
-
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+## Updating quartz
+```bash
+npx quartz update
+```
+## Restoring content from cache, if merge conflict
+```bash
+npx quartz restore
+```
+## Authoring Content
+- `title` : Title of the page. If it isn’t provided, Quartz will use the name of the file as the title.
+- `aliases` : Other names for this note. This is a list of strings.
+- `draft` : Whether to publish the page or not. This is one way to make pages private in Quartz.
+- `date` : A string representing the day the note was published. Normally uses YYYY-MM-DD format
