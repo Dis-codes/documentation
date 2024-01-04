@@ -146,8 +146,9 @@ switch (args.CHANGE) {
   		1. checkbox
 	- *`inputs`: MutatorInput[]
       -  *`text`: string of the field name(use single word for it, this will be removed when inputName field will be added!!!)
-      -  *`type`: OutputType or string[] of types
-      -  *`defaultValue`: Determines if input on start is shown, boolean(this field will be modified for multiple types or kept for only the checkbox mutator!!!)    
+      -  *`type`: OutputType or string[] of types 
+      - *`defaultValue`: Determines if input on start is shown, boolean(this field will be modified for multiple types or kept for only the checkbox mutator!!!)    
+      -   `inputName`: is used to get input value when generating js, if left empty will use *`text` field for input name and then its used to get the value.(used when *`text` field is with multiple words.)  
     - `blockType`: id of a block as base for block when opening the mutator menu.
     - `color`: color of the block that is inside the mutator menu
 
