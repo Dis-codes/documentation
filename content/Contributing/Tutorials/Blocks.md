@@ -134,3 +134,54 @@ switch (args.CHANGE) {
         }
     }
 ```
+
+## Mutators
+### Defining it
+
+###### *required fields for mutator to work
+
+- *`mutator` - string field for defining mutator id.
+- *`mutatorData`
+	- *`type`: 
+  		1. checkbox
+	- *`inputs`: MutatorInput[]
+      -  *`text`: string of the field name(use single word for it, this will be removed when inputName field will be added!!!)
+      -  *`type`: OutputType or string[] of types 
+      - *`defaultValue`: Determines if input on start is shown, boolean(this field will be modified for multiple types or kept for only the checkbox mutator!!!)    
+      -   `inputName`: is used to get input value when generating js, if left empty will use *`text` field for input name and then its used to get the value.(used when *`text` field is with multiple words.)  
+    - `blockType`: id of a block as base for block when opening the mutator menu.
+    - `color`: color of the block that is inside the mutator menu
+
+### Example of mutator block
+```ts
+//other blocks...
+
+{
+	func: "test_mainblock",
+	text: "statement blockwdwdwdw",
+	mutator: "test_mainblock_mutator",
+	mutatorData: {
+		type: MutatorType.CheckBox,
+		inputs: [
+            		{
+				text: "Title", // text for input text
+				type: OutputType.STRING, // type for input added to the main block
+				defaultValue: true, // whether the checkbox is checked also will affect if input is showed on start
+			},
+			{
+				text: "Description",
+				type: OutputType.STRING,
+				defaultValue: false,
+			}
+		]
+	},
+	shape: BlockShape.EVENT
+}
+//other blocks...
+```
+##### Getting input data
+```ts
+    test_mainblock(args: any) {
+        return `console.log(${args.Title}, ${args.Description})`
+    }
+```
