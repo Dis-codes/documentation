@@ -134,7 +134,42 @@ switch (args.CHANGE) {
         }
     }
 ```
+## Warnings
+WarningType.
+- RequiredParent - adds warning when blocks root block isn't correct
+- EmptyInput - when field is empty
 
+###### fields to define warnings
+- 'warnings' - list of warnings
+	- type: WarningType
+	- message: string
+ 	- inputName: string | string[] - a string or a list of strings that are checked whether they are empty
+  	- parentType: string | string[] - a string or a list of strings that check whether root block is the right type
+###### Example
+```js
+{
+                    func: "test_warning",
+                    text: "Warning parent\n input: [INPUT]",
+                    shape: BlockShape.STATEMENT,
+                    warnings: [
+                        {
+                            type: WarningType.RequiredParent,
+                            parentType: "coretest_testevent",
+                            message: "this block belongs under test event block!"
+                        },
+                        {
+                            type: WarningType.EmptyInput,
+                            inputName: "INPUT",
+                            message: "Input field is empty"
+                        },
+                    ],
+                    arguments: {
+                        INPUT: {
+                            type: InputShape.VALUE
+                        }
+                    }
+},
+```
 ## Mutators
 ### Defining it
 
