@@ -20,27 +20,42 @@ All blocks are located inside a `/lib/blocks/js` folder under specific category
 Examples of using blocks can be found in [[Blocks]]
 We are using the latest discord.js version `14.14`
 ## Toolbox
-### Adding block to toolbox
-All toolbox blocks are located inside a `/lib/entries` folder under specific category
-### Using Toolbox
-Toolbox is defined inside `entries/index.ts` you must import the folder and then define it in the toolbox bellow, select a color, name.
+From now on toolbox is automatically generated. So you can only add the block definitions.
 
-For creating the folder you can look at others, but it´s very basic. it exports an array of blocks like
-```js
-export default [
-    {
-        kind: "block",
-        type: "categoryName_blockName"
-    },
-]
+To change a color name or make it hidden you can add these properties in category definition
+```ts
+export default class {
+    getRegistry() {
+        return {
+            id: "joins",
+            name: "User Joins",//name of the categorz
+            color: "#60cc6c", //color
+            hidden: true, //hidden
+            blocks: []
+        };
+    }
+}
+```
+### Extended
+extended is used to add default blocks or labels
+
+#### Category
+To change a category name or colors you can use extended
+```json
+"discord.js": {
+          name: "Discord.JS",
+          colour: "#5b80a5",
+          expanded: false
+}
 ```
 
-You can also add a text in there
-```js
-{
+Or you can add labels
+
+```json
+category: [{
     kind: "label",
     text: "Custom text inside a toolbox!"
-},
+}]
 ```
 #### Group of blocks
 And making a group of blocks when defining the block, using the same inputs.
